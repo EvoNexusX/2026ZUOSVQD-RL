@@ -1,0 +1,5 @@
+numpy==1.26.4
+torch==2.4.0
+scipy==1.15.3
+gymnasium==1.2.3
+mujoco==3.8.0
