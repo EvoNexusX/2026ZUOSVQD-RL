@@ -1761,7 +1761,7 @@ class HybridSparseOptimizer:
 def parse_args(argv=None):
     """Run controls and common budgets; full hyperparameters are defined in t.py."""
     defaults = SparseNetworkOptimizationConfig()
-    parser = argparse.ArgumentParser(description='SV-QD-RL training')
+    parser = argparse.ArgumentParser(description='svqd-rl training')
     options = (
         'M',
         'seed',

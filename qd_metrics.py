@@ -10,7 +10,7 @@ from behavior_descriptor import BD_BOUNDS, BD_DIM, GRID_BINS_PER_DIM
 
 @dataclass
 class QDMetrics:
-    """Metrics for the canonical SV-QD-RL behavioral archive."""
+    """Metrics for the canonical svqd-rl behavioral archive."""
     qd_score: float = 0.0
     coverage: float = 0.0
     coverage_percent: float = 0.0
@@ -82,7 +82,7 @@ class BehaviorDescriptorGrid:
         if (behavior_dim != BD_DIM or len(self.grid_resolution) != BD_DIM
                 or self.grid_resolution[0] != self.grid_resolution[1]
                 or not np.array_equal(np.asarray(bounds), np.asarray(BD_BOUNDS))):
-            raise ValueError("SV-QD-RL metrics require a square grid over [0, 1]^2")
+            raise ValueError("svqd-rl metrics require a square grid over [0, 1]^2")
         self.n_bins = int(self.grid_resolution[0])
         if self.n_bins < 1:
             raise ValueError("grid resolution must be positive")

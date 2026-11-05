@@ -1,4 +1,4 @@
-# SV-QD-RL
+# svqd-rl
 
 The training entry point is `main.py`. Default settings are defined in `SparseNetworkOptimizationConfig` in `t.py`. Training collects experience directly from Gymnasium / MuJoCo environments; no dataset download is required.
 
@@ -6,10 +6,11 @@ The training entry point is `main.py`. Default settings are defined in `SparseNe
 
 The commands below use Python 3.11. Dependencies are pinned in `requirements.txt`: NumPy 1.26.4, PyTorch 2.4.0, SciPy 1.15.3, Gymnasium 1.2.3, and MuJoCo 3.8.0.
 
+Run all commands from the directory containing `main.py` and `requirements.txt`.
+
 ### Windows / PowerShell
 
 ```powershell
-Set-Location "C:\Users\ROG\Desktop\SV-QD-RL_JMLR\SV-QD-RL_JMLR_submission\code"
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -18,8 +19,6 @@ py -3.11 -m venv .venv
 If `py` is unavailable, confirm that `python --version` reports Python 3.11, then create the environment with `python -m venv .venv`. The commands below call the virtual environment's interpreter directly, so activation is unnecessary.
 
 ### Linux
-
-From the extracted `SV-QD-RL_JMLR_submission/code` directory:
 
 ```bash
 python3.11 -m venv .venv
@@ -31,7 +30,7 @@ The program automatically uses a GPU when PyTorch detects CUDA, and otherwise us
 
 ## 2. Start training
 
-Open PowerShell in the `code` directory and choose a command:
+From the same directory, choose a command in PowerShell:
 
 ```powershell
 # Default run: Hopper-v5, seed 1, 50 outer iterations
